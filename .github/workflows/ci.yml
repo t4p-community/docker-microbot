@@ -13,10 +13,10 @@ jobs:
       fail-fast: false
       matrix:
         platform:
-          - linux/amd64
-          - linux/arm32v6
-          - linux/arm32v7
-          - linux/arm64v8
+          - amd64
+          - arm32v6
+          - arm32v7
+          - arm64v8
     steps:
       - name: Prepare
         run: |
