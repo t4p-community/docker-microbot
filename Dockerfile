@@ -5,4 +5,4 @@ COPY html /usr/share/nginx/html
 COPY start_nginx.sh /
 
 # Run nginx
-CMD /start_nginx.sh
+CMD ["/start_nginx.sh"]
