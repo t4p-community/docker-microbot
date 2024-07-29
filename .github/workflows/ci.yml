@@ -4,7 +4,7 @@ on:
   push:
 
 env:
-  REGISTRY_IMAGE: t4pcommunity/microbot:latest
+  REGISTRY_IMAGE: t4pcommunity/microbot
 
 jobs:
   build:
