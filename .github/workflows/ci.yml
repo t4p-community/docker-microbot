@@ -1,7 +1,9 @@
 name: ci
 
 on:
-  push:
+  push: 
+    branches:
+      - main
 
 env:
   REGISTRY_IMAGE: t4pcommunity/microbot
@@ -31,7 +33,7 @@ jobs:
             ${{ env.REGISTRY_IMAGE }}
           tags: |
             # set latest tag for default branch
-            type=raw,value=latest,enable={{is_default_branch}}
+            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'main') }}
         
       
       - name: Set up QEMU
