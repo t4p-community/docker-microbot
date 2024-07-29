@@ -32,9 +32,7 @@ jobs:
           images: |
             ${{ env.REGISTRY_IMAGE }}
           tags: |
-            # set latest tag for default branch
-            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'main') }}
-        
+            type=raw,value=latest
       
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
